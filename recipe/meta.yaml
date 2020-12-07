@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.1.3" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c226ddefdcab88eb04444f0e0e06b6ee505d1d8b7633e465e78cb4ecb4478e24
+  sha256: 9f373826e11dd1298da4a7ce83fed09125151446ab8294948baf3dd5cf0e5246
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - setuptools
     - py3dep
     - lxml
+    - dask
 
 test:
   imports:
