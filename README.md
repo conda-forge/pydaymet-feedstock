@@ -5,9 +5,13 @@ Home: https://github.com/cheginit/pydaymet
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydaymet-feedstock/blob/master/LICENSE.txt)
 
 Summary: Access the climate data from the Daymet database through ORNL's RESTful service.
+
+Development: https://github.com/cheginit/pydaymet
+
+Documentation: https://hydrodata.readthedocs.io
 
 PyDaymet is a part of Hydrodata software stack that provides access to the Daymet's climate
 data through ORNL's RESTful service.
