@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: 16869c54e3e50864496cc40daf45d9f6d4181a64adc62fc9bf18e9c38770b32b
+  sha256: 0b84456bc204dd679d61e0c93897543ecd1701e9a5acb2767cd4aae08a5c906c
 
 build:
   number: 0
@@ -41,6 +41,7 @@ requirements:
     - python >=3.6
     - rasterio
     - requests
+    - scipy
     - setuptools
     - shapely
     - simplejson
