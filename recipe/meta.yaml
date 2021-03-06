@@ -1,47 +1,65 @@
 {% set name = "pydaymet" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.1" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a1cdeede64299abea66340f8f2705f086ba768f0f20aa1b5f5b33e4c7ef65339
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
+  sha256: 0b84456bc204dd679d61e0c93897543ecd1701e9a5acb2767cd4aae08a5c906c
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
     - pip
-    - setuptools_scm
-  run:
     - python >=3.6
-    - setuptools
-    - py3dep
+    - setuptools-scm
+  run:
+    - aiodns
+    - aiohttp
+    - brotlipy
+    - chardet
+    - cytoolz
+    - dask-core
+    - defusedxml
+    - geopandas
     - lxml
-    - dask
+    - nest-asyncio
+    - netcdf4
+    - orjson
+    - owslib
+    - py3dep
+    - pygeoogc
+    - pygeoutils
+    - pyproj
+    - python >=3.6
+    - rasterio
+    - requests
+    - scipy
+    - setuptools
+    - shapely
+    - simplejson
+    - xarray
 
 test:
   imports:
     - pydaymet
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/cheginit/pydaymet
+  summary: Access the climate data from the Daymet database through its RESTful service.
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: Access the climate data from the Daymet database through ORNL's RESTful service.
-
-  description: |
-    PyDaymet is a part of Hydrodata software stack that provides access to the Daymet's climate
-    data through ORNL's RESTful service.
-  doc_url: https://hydrodata.readthedocs.io
-  dev_url: https://github.com/cheginit/pydaymet
 
 extra:
   recipe-maintainers:
