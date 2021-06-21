@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.10.2" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -8,43 +8,35 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: b44d23e9837b739fff4cf978d8d98a57fd2c6d19d51e2dabe134654595ece1d9
+  sha256: 53d92903581fa4546630c1c2aeb5d9e1960f45f2a2fde5eac2aa6e218020b775
 
 build:
   number: 0
   noarch: python
+  entry_points:
+    - pydaymet = pydaymet.cli:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools-scm
   run:
-    - aiodns
-    - aiohttp
-    - brotlipy
-    - chardet
-    - cytoolz
+    - async_retriever
+    - click
     - dask-core
-    - defusedxml
-    - geopandas
     - lxml
-    - nest-asyncio
-    - netcdf4
-    - orjson
-    - owslib
+    - numpy
+    - pandas
     - py3dep
+    - pydantic
     - pygeoogc
     - pygeoutils
-    - pyproj
-    - python >=3.6
+    - python >=3.7
     - rasterio
-    - requests
     - scipy
-    - setuptools
     - shapely
-    - simplejson
     - xarray
 
 test:
@@ -52,6 +44,7 @@ test:
     - pydaymet
   commands:
     - pip check
+    - pydaymet --help
   requires:
     - pip
 
