@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: af69d4d15bcfdff09a11b1711e925e1fc7cb7ca75b3c790fe348d5427719417b
+  sha256: ac46d8dea11afd989cc4391338dff1881218d1f1a15e7085039beb167b81089f
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - pydaymet = pydaymet.cli:main
+    - pydaymet = pydaymet.cli:cli
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -29,12 +29,12 @@ requirements:
     - lxml
     - numpy >=1.17
     - pandas >=1.0
-    - py3dep
+    - py3dep >=0.11.3
     - pydantic
-    - pygeoogc >=0.11
-    - pygeoutils >=0.11
+    - pygeoogc >=0.11.5
+    - pygeoutils >=0.11.5
     - python >=3.7
-    - rasterio
+    - rasterio >=1.2
     - scipy
     - shapely >=1.6
     - xarray >=0.17
