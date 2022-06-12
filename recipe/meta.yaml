@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: aefa8602133989dd94894e4074563664de046832e0c45baa6c7c31d71b72921d
+  sha256: 931752a4eae81fcc06335f12b7a19e94bc675a3ace18031fc96caac107f710d4
 
 build:
   number: 0
