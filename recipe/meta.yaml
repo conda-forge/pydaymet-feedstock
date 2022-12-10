@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.13.7" %}
+{% set version = "0.13.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: 50a6068719ff0d7707ee5b63501db23ceb85863daf0d862547888f9572f06eda
+  sha256: da9287186698b0d88ce296e1b9b06c980de68f09505e73d54c974909937cd8d0
 
 build:
   entry_points:
@@ -23,15 +23,15 @@ requirements:
     - setuptools-scm
   run:
     - python >=3.8
-    - async-retriever >=0.3.6
+    - async-retriever >=0.3.7
     - click >=0.7
     - dask-core
     - lxml
     - numpy >=1.17
     - pandas >=1.0
-    - py3dep >=0.13.7
-    - pygeoogc >=0.13.7
-    - pygeoutils >=0.13.9
+    - py3dep >=0.13.8
+    - pygeoogc >=0.13.8
+    - pygeoutils >=0.13.10
     - rasterio >=1.2
     - scipy
     - shapely >=1.8
