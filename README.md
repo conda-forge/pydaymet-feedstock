@@ -1,11 +1,11 @@
-About pydaymet
-==============
+About pydaymet-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydaymet-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/hyriver/pydaymet
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydaymet-feedstock/blob/main/LICENSE.txt)
 
 Summary: Access daily, monthly, and annual climate data via the Daymet web service.
 
