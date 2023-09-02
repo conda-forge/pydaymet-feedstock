@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: 4983853c336a383ca16d498b6d67977a2cc6ff9de65ed140091bec07f218e9e8
+  sha256: ab6b1cb0cb6fd1c2ba5b160250f6a8132df84758697bb296c84e14373ca78f82
 
 build:
   entry_points:
@@ -24,22 +24,22 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - async-retriever =0.15
+    - async-retriever <0.16,>=0.15
     - click >=0.7
     - dask-core
     - geopandas >=0.10
     - lxml
     - numpy >=1.21
     - pandas >=1.0
-    - py3dep =0.15
-    - pygeoogc =0.15
-    - pygeoutils =0.15
-    - pyproj >=2.2
+    - py3dep <0.16,>=0.15.1
+    - pygeoogc <0.16,>=0.15.1
+    - pygeoutils <0.16,>=0.15
+    - pyproj >=3.0.1
     - rasterio >=1.2
     - rioxarray >=0.11
     - scipy
     - shapely >=1.8.5
-    - xarray >=2022.03.0
+    - xarray >=2023.04.0
 
 test:
   imports:
