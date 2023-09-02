@@ -31,8 +31,8 @@ requirements:
     - lxml
     - numpy >=1.21
     - pandas >=1.0
-    - py3dep <0.16,>=0.15
-    - pygeoogc <0.16,>=0.15
+    - py3dep <0.16,>=0.15.1
+    - pygeoogc <0.16,>=0.15.1
     - pygeoutils <0.16,>=0.15
     - pyproj >=3.0.1
     - rasterio >=1.2
