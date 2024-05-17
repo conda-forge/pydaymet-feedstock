@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.16.1" %}
+{% set version = "0.16.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: 5b8f3980ea4d2188ec2b95e08397492dd278cd5490247010be1a710825ea4719
+  sha256: d949337fa18defd5585b5149a463010ab9384e3034cdbde45b9540b9027f6853
 
 build:
   entry_points:
@@ -32,8 +32,8 @@ requirements:
     - numpy >=1.21
     - pandas >=1.0
     - py3dep <0.17,>=0.16
-    - pygeoogc <0.17,>=0.16
-    - pygeoutils <0.17,>=0.16
+    - pygeoogc <0.17,>=0.16.3
+    - pygeoutils <0.17,>=0.16.3
     - pyproj >=3.0.1
     - rasterio >=1.2
     - rioxarray >=0.11
