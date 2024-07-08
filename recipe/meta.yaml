@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.16.3" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: d949337fa18defd5585b5149a463010ab9384e3034cdbde45b9540b9027f6853
+  sha256: e0cb8887ef2c279417db93521a499e2a72fda7a5626e3b545f8b93defc1c3c06
 
 build:
   entry_points:
@@ -19,21 +19,21 @@ build:
 requirements:
   host:
     - python >=3.8
-    - setuptools >=42
-    - setuptools-scm >=7
+    - hatchling >=1.12
+    - hatch-vcs
     - pip
   run:
     - python >=3.8
-    - async-retriever <0.17,>=0.16
+    - async-retriever <0.18,>=0.17
     - click >=0.7
     - geopandas-base >=0.10
-    - fiona
+    - pyogrio
     - lxml
     - numpy >=1.21
     - pandas >=1.0
-    - py3dep <0.17,>=0.16
-    - pygeoogc <0.17,>=0.16.3
-    - pygeoutils <0.17,>=0.16.3
+    - py3dep <0.18,>=0.17
+    - pygeoogc <0.18,>=0.17
+    - pygeoutils <0.18,>=0.17
     - pyproj >=3.0.1
     - rasterio >=1.2
     - rioxarray >=0.11
