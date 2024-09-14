@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: e0cb8887ef2c279417db93521a499e2a72fda7a5626e3b545f8b93defc1c3c06
+  sha256: fec25af47928d7946294dd048d8dea17e63aa3a2c72594d62154710024498afc
 
 build:
   entry_points:
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - hatchling >=1.12
     - hatch-vcs
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - async-retriever <0.18,>=0.17
     - click >=0.7
     - geopandas-base >=0.10
