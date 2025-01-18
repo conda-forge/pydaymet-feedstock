@@ -1,5 +1,5 @@
 {% set name = "pydaymet" %}
-{% set version = "0.18.0" %}
+{% set version = "0.19.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydaymet-{{ version }}.tar.gz
-  sha256: 63395486e79409686a76d578a95fd2cbbbfc69536877d4b20a99fa1828cd2b83
+  sha256: 56973b592351b68f29353e9f0794e9b0b89ac2c6408754075e782d19a5d2e9ce
 
 build:
   entry_points:
     - pydaymet = pydaymet.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
